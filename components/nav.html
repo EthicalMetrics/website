@@ -1,0 +1,105 @@
+<!-- beging nav -->
+  <nav class="nav-flotante">
+    <div class="nav-contenido">
+      <a href="#index" class="nav-logo" data-link="index">
+        <svg class="nav-logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L3 7L12 12L21 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 12L12 17L21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 17L12 22L21 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        EthicalMetrics
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="nav-enlaces">
+        <a href="#about" class="nav-link type-mono-01" data-link="about">Our story</a>
+        <a href="#pricing" class="nav-link type-mono-01" data-link="pricing">Pricing</a>
+        <a href="https://deepwiki.com/livrasand/EthicalMetrics" class="nav-link type-mono-01">Docs</a>
+      </div>
+    </div>
+  </nav>
+  <style>
+  
+  .nav-enlaces {
+    display: flex;
+    gap: 1.5em;
+  }
+  
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3em;
+    width: 2.2em;
+    height: 2.2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3em;
+  }
+  .nav-toggle-bar {
+    width: 100%;
+    height: 1px;
+    background: #E7DBFF;
+    border-radius: 0;
+    display: block;
+    transition: 0.3s;
+  }
+  @media (max-width: 768px) {
+    .nav-contenido {
+      flex-wrap: wrap;
+    }
+    .nav-enlaces {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: rgba(20, 20, 20, 1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      width: 100vw;
+      height: 100vh;
+      max-width: 220px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      padding: 1.2em 1em;
+      gap: 1em;
+      display: none;
+      z-index: 200;
+      animation: fadeInNav 0.2s;
+    }
+    .nav-enlaces.open {
+      display: flex;
+    }
+    .nav-toggle {
+      display: flex;
+    }
+  }
+  @keyframes fadeInNav {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  </style>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const enlaces = document.querySelector('.nav-enlaces');
+    if (toggle && enlaces) {
+      toggle.addEventListener('click', function() {
+        const expanded = enlaces.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', expanded);
+      });
+      // Opcional: cerrar menú al hacer click fuera
+      document.addEventListener('click', function(e) {
+        if (!toggle.contains(e.target) && !enlaces.contains(e.target)) {
+          enlaces.classList.remove('open');
+          toggle.setAttribute('aria-expanded', false);
+        }
+      });
+    }
+  });
+  </script>
+<!-- end nav -->
