@@ -36,11 +36,13 @@ function loadDashboard() {
         script.defer = true;
         
         script.onload = () => {
+        setTimeout(() => {
           if (window.initDashboard) {
             window.initDashboard();
           }
-          resolve();
-        };
+        }, 0); 
+        resolve();
+      };
         
         document.body.appendChild(script);
       });
