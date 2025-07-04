@@ -64,6 +64,14 @@ function navigateTo(page) {
     loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/pricing.html');
   } else if (page === "dashboard") {
     loadDashboard();
+  } else if (page === "about") {
+    loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/about.html');
+  } else if (page === "privacy") {
+    loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/privacy.html');
+  } else if (page === "terms") {
+    loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/terms.html');
+  } else if (page === "security") { 
+    loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/security.html');
   } else {
     loadComponent('main', `https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/${page}.html`);
   }
@@ -90,6 +98,14 @@ if (page === "pricing") {
   loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/pricing.html');
 } else if (page === "dashboard") {
   loadDashboard();
+} else if (page === "about") { 
+  loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/about.html');
+} else if (page === "privacy") { 
+  loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/privacy.html');
+} else if (page === "terms") { 
+  loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/terms.html');
+} else if (page === "security") { 
+  loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/security.html');
 } else {
   loadComponent('main', `https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/${page}.html`);
 }
@@ -100,6 +116,14 @@ window.addEventListener("popstate", () => {
     loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/pricing.html');
   } else if (page === "dashboard") {
     loadDashboard();
+  } else if (page === "about") { 
+    loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/about.html');
+  } else if (page === "privacy") { 
+    loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/privacy.html');
+  } else if (page === "terms") { 
+    loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/terms.html');
+  } else if (page === "security") { 
+    loadComponent('main', 'https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/security.html');
   } else {
     loadComponent('main', `https://cdn.jsdelivr.net/gh/EthicalMetrics/website@latest/components/${page}.html`);
   }
